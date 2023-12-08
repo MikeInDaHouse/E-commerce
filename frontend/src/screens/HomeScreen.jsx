@@ -6,12 +6,12 @@ import axios from 'axios';
 // import React from 'react'
 
 const HomeScreen = () => {
-   const [products, setProudcts] = useState({});
+   const [products, setProudct] = useState([]);
 
    useEffect(() => {
     const fetchProducts = async () => {
     const { data } = await axios.get('/api/products')
-    setProudcts(data);
+    setProudct(data);
    };
    
    fetchProducts();
